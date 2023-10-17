@@ -1,0 +1,182 @@
+definitions:
+  main.Person:
+    properties:
+      forename:
+        type: string
+      gender:
+        type: boolean
+      id:
+        type: integer
+      patronymic:
+        type: string
+      region_id:
+        type: integer
+      surname:
+        type: string
+    type: object
+  main.Region:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+info:
+  title: CRUD
+  version: 1.0.0
+  contact: {}
+paths:
+  /people/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a person
+      operationId: delete-person
+      parameters:
+      - description: Person ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Person'
+      summary: Delete a person
+    put:
+      consumes:
+      - application/json
+      description: Update a person
+      operationId: update-person
+      parameters:
+      - description: Person ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Person
+        in: body
+        name: person
+        required: true
+        schema:
+          $ref: '#/definitions/main.Person'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Person'
+      summary: Update a person
+  /person:
+    get:
+      consumes:
+      - application/json
+      description: Get all persons
+      operationId: get-person
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Person'
+      summary: Get all persons
+    post:
+      consumes:
+      - application/json
+      description: Create a person
+      operationId: create-person
+      parameters:
+      - description: Person
+        in: body
+        name: person
+        required: true
+        schema:
+          $ref: '#/definitions/main.Person'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Person'
+      summary: Create a person
+  /person/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Get a person
+      operationId: get-person-by-int
+      parameters:
+      - description: Person ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Person'
+      summary: Get a person
+  /region:
+    get:
+      consumes:
+      - application/json
+      description: Get all regions
+      operationId: get-regions
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Region'
+      summary: Get all regions
+    post:
+      consumes:
+      - application/json
+      description: Create a region
+      operationId: create-region
+      parameters:
+      - description: Region
+        in: body
+        name: region
+        required: true
+        schema:
+          $ref: '#/definitions/main.Region'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Region'
+      summary: Create a region
+  /regionresidents/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Get all residents in a region
+      operationId: get-residents
+      parameters:
+      - description: Region ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Person'
+      summary: Get all residents in a region
+swagger: "2.0"
