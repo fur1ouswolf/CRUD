@@ -7,7 +7,7 @@ This is a simple CRUD application written in Go using Gin and GORM. It uses Post
 ### Technical Assignment
 ##### Tables
 - Regions: id, name
-- Persons: id, forename, surname, patronymic, region_id
+- Persons: id, forename, surname, patronymic, gender, region_id
 
 ##### Endpoints
 - GET /region - returns a list of regions
