@@ -20,7 +20,7 @@ This is a simple CRUD application written in Go using Gin and GORM. It uses Post
 - POST /person/:id - updates a person
 - GET /person/region/:id - returns a residents of the region
 
-### Prerequisites
+### Requirements
 - Go 1.21
 - PostgreSQL
 - Docker
