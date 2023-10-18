@@ -18,7 +18,7 @@ This is a simple CRUD application written in Go using Gin and GORM. It uses Post
 - GET /person/:id - returns a person
 - DELETE /person/:id - deletes a person
 - POST /person/:id - updates a person
-- GET /person/region/:id - returns a region of a person
+- GET /person/region/:id - returns a residents of the region
 
 ### Prerequisites
 - Go 1.21
