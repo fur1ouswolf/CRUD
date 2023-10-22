@@ -8,7 +8,6 @@ import (
 
 func ConnectDB() *gorm.DB {
 	db, err := gorm.Open(
-		//postgres.Open("host=localhost port=5432 user=meow password=123456 dbname=crud sslmode=disable"),
 		postgres.Open("host=postgres port=5432 user=postgres password=123456 dbname=crud sslmode=disable"),
 		&gorm.Config{},
 	)
