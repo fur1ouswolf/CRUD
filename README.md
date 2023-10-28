@@ -1,4 +1,4 @@
-## CRUD (Create, Read, Update, Delete) Operations with Go (Gin, GORM) and PostgreSQL
+## CRUD (Create, Read, Update, Delete) operations with Go (Gin, GORM) and PostgreSQL
 
 
 ### Overview
