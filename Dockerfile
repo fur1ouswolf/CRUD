@@ -20,4 +20,4 @@ COPY .env /
 EXPOSE ${APP_PORT}
 
 # Run the binary
-ENTRYPOINT ["/app", "--config=/app.env"]
+ENTRYPOINT ["/app", "--config=/.env"]
